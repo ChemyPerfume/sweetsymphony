@@ -1,0 +1,23 @@
+<section class="products">
+  <h2>Our Products</h2>
+  <ul>
+    <script>
+      // Replace with your product data (name, price, image)
+      const products = [
+        { name: "Sweet Symphony Gift Set", price: 49.99, image: "images/giftset.jpg" },
+        // ... add more products
+      ];
+
+      products.forEach(product => {
+        const productItem = document.createElement("li");
+        productItem.innerHTML = `
+          <img src="${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>$${product.price}</p>
+          <button>Add to Cart</button>
+        `;
+        document.querySelector(".products").appendChild(productItem);
+      });
+    </script>
+  </ul>
+</section>
